@@ -1,0 +1,16 @@
+{
+  "name": "wistupiku-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wistʼupiku — sitio de pedidos + Caser-IA, asistente de pedidos",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test tests/tools.test.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.12.0",
+    "openai": "^7.62.0"
+  }
+}

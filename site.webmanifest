@@ -1,0 +1,14 @@
+{
+  "name": "Wistʼupiku · El sabor de la tradición",
+  "short_name": "Wistʼupiku",
+  "description": "Empanadas y repostería tradicional boliviana desde 1939. Pide por WhatsApp a tu sucursal.",
+  "lang": "es-BO",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbf3e4",
+  "theme_color": "#4a1d18",
+  "icons": [
+    { "src": "assets/brand/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/brand/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

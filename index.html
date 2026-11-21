@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="es-BO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wistʼupiku · El sabor de la tradición · Empanadas bolivianas desde 1939</title>
+<meta name="description" content="Empanadas y repostería tradicional boliviana desde 1939. Wistus de queso, jawitas, salteñas, api y helados batidos a mano en Cochabamba, Santa Cruz, La Paz y Sucre. Pide por WhatsApp a tu sucursal.">
+<meta name="theme-color" content="#4a1d18">
+<link rel="canonical" href="https://wistupiku.vercel.app/">
+<meta property="og:type" content="restaurant">
+<meta property="og:site_name" content="Wistʼupiku">
+<meta property="og:title" content="Wistʼupiku · El sabor de la tradición desde 1939">
+<meta property="og:description" content="Empanadas y repostería tradicional boliviana. Combo Tradición: empanada de queso + helado a Bs 15. Pide por WhatsApp.">
+<meta property="og:image" content="https://wistupiku.vercel.app/assets/brand/wistupiku-logo-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+<meta property="og:locale" content="es_BO">
+<meta property="og:url" content="https://wistupiku.vercel.app/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Wistʼupiku · El sabor de la tradición">
+<meta name="twitter:description" content="Empanadas y repostería tradicional boliviana desde 1939.">
+<meta name="twitter:image" content="https://wistupiku.vercel.app/assets/brand/wistupiku-logo-share.jpg">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat:wght@600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero/slide-combo.webp" fetchpriority="high">
+<link rel="stylesheet" href="css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Wistʼupiku",
+  "slogan": "El sabor de la tradición",
+  "foundingDate": "1939",
+  "servesCuisine": ["Boliviana", "Empanadas", "Salteñas", "Repostería tradicional"],
+  "priceRange": "Bs 2,50 – Bs 26",
+  "image": "https://wistupiku.vercel.app/assets/brand/wistupiku-logo-share.jpg",
+  "url": "https://wistupiku.vercel.app/",
+  "address": { "@type": "PostalAddress", "addressLocality": "Cochabamba", "addressCountry": "BO" },
+  "areaServed": ["Cochabamba", "Santa Cruz de la Sierra", "La Paz", "Sucre"],
+  "sameAs": ["https://www.instagram.com/wistupiku/", "https://www.facebook.com/wistupiku", "https://www.tiktok.com/@wistupiku", "https://linktr.ee/wistupiku"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<!-- Promo ticker -->
+<div class="ticker" aria-label="Novedades">
+  <div class="ticker__track" id="ticker"></div>
+</div>
+
+<!-- Header -->
+<header class="hdr" id="hdr">
+  <div class="hdr__row wrap">
+    <a class="brand" href="#top" aria-label="Wistʼupiku, inicio">
+      <img class="brand__logo" src="assets/img/logo.png" alt="" width="44" height="44">
+      <img class="brand__word brand__word--cream" src="assets/brand/wordmark-cream.png" alt="Wistʼupiku" width="150" height="37">
+      <img class="brand__word brand__word--dark" src="assets/brand/wordmark.png" alt="" width="150" height="37" aria-hidden="true">
+    </a>
+    <nav class="pill pill--inline" aria-label="Principal"></nav>
+    <div class="hdr__tools">
+      <a class="openpill" href="#sucursales" id="openCount"><span class="dot dot--live"></span><span>— abiertas</span></a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="mnav"><span class="burger__bars" aria-hidden="true"></span><span class="ico__lbl">Menú</span></button>
+      <a class="startpill" href="#pedir" data-funnel>Empezar pedido</a>
+      <button class="ico ico--help" data-chat aria-label="Ayuda: abrir Caser-IA">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H11l-4.5 4v-4h0A2.5 2.5 0 0 1 4 13.5z"/><path d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>
+        <span class="ico__lbl">Ayuda</span>
+      </button>
+      <button class="ico ico--cart" data-cart aria-label="Ver mi pedido">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 10V7a3 3 0 0 1 6 0v3"/></svg>
+        <span class="badge" id="cartCount" hidden>0</span>
+        <span class="ico__lbl">Pedido</span>
+      </button>
+    </div>
+  </div>
+  <div class="hdr__row hdr__row--pill wrap"><nav class="pill" aria-label="Secciones"></nav></div>
+</header>
+
+<nav class="mnav" id="mnav" aria-label="Menú móvil" hidden>
+  <ul id="mnavList"></ul>
+</nav>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- HERO / promo carousel -->
+<section class="hero" aria-roledescription="carrusel" aria-label="Promociones" id="hero">
+  <h1 class="vh">Wistʼupiku · empanadas y repostería tradicional boliviana desde 1939 · Cochabamba, Santa Cruz, La Paz y Sucre</h1>
+
+  <article class="slide slide--dark is-active" aria-roledescription="diapositiva" aria-label="1 de 3: Combo Tradición" data-theme="dark">
+    <div class="slide__bg"></div>
+    <div class="slide__in wrap">
+      <div class="slide__copy">
+        <span class="kicker">Todos los días · a nivel nacional</span>
+        <h2 class="slide__title">Combo<br><em>Tradición</em></h2>
+        <div class="lockup"><span class="lockup__cur">Bs</span><span class="lockup__num" data-price="combo-tradicion">15</span><span class="lockup__desc">1 empanada de queso al horno + 1 helado simple a elección.</span></div>
+        <div class="slide__cta">
+          <button class="btn btn--mustard btn--lg" data-add="combo-tradicion">Agregar al pedido</button>
+          <a class="btn btn--ghost btn--lg" href="#combos">Ver combo</a>
+        </div>
+      </div>
+      <div class="slide__media">
+        <img src="assets/hero/slide-combo.webp" alt="Empanada de queso al horno junto a un plato de helado de canela, con el sello de 15 Bs" width="980" height="605" fetchpriority="high">
+        <div class="sticker" aria-hidden="true">
+          <svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+            <text><textPath href="#circ">DESDE 1939 · EL SABOR DE LA TRADICIÓN · </textPath></text></svg>
+          <span class="sticker__mid">1939</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="slide slide--light" aria-roledescription="diapositiva" aria-label="2 de 3: Empanadas especiales" data-theme="light">
+    <div class="slide__bg"></div>
+    <div class="slide__in wrap">
+      <div class="slide__copy">
+        <span class="kicker">Las especiales</span>
+        <h2 class="slide__title">Pollo, carne<br><em>o charque</em></h2>
+        <div class="lockup"><span class="lockup__cur">Bs</span><span class="lockup__num" data-price="wistu-pollo">11</span><span class="lockup__desc">Ideales para una pausa en medio de la rutina. ¿Ya las probaste?</span></div>
+        <div class="slide__cta">
+          <button class="btn btn--red btn--lg" data-add="wistu-pollo">Agregar una de pollo</button>
+          <a class="btn btn--outline btn--lg" href="#carta" data-tab="horno">Ver al horno</a>
+        </div>
+      </div>
+      <div class="slide__media slide__media--arch">
+        <img src="assets/hero/slide-especiales.webp" alt="Empanadas especiales abiertas, mostrando el relleno de pollo" width="900" height="925" loading="lazy">
+        <span class="note" aria-hidden="true">¡bien rellenitas! ↘</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="slide slide--reel" aria-roledescription="diapositiva" aria-label="3 de 3: La jawita" data-theme="dark">
+    <div class="slide__bg" style="--poster:url('../assets/hero/jawita-hd.webp')"></div>
+    <div class="slide__in wrap">
+      <div class="slide__copy">
+        <span class="kicker">Desde las alturas</span>
+        <h2 class="slide__title">¿Qué es una<br><em>jawita?</em></h2>
+        <div class="lockup"><span class="lockup__cur">Bs</span><span class="lockup__num" data-price="jawita">8</span><span class="lockup__desc">Empanada frita con relleno de queso y leche. Una deliciosa mezcla 🧡</span></div>
+        <div class="slide__cta">
+          <button class="btn btn--mustard btn--lg" data-add="jawita">Agregar jawita</button>
+          <a class="btn btn--ghost btn--lg" href="https://www.instagram.com/reel/CrJRbkfLNjw/" target="_blank" rel="noopener">Ver el reel ↗</a>
+        </div>
+      </div>
+      <div class="slide__media slide__media--reel">
+        <div class="reelcard">
+          <video muted playsinline loop preload="none" poster="assets/hero/jawita-hd.webp" data-hero-video aria-label="Video: jawitas en la vitrina">
+            <source src="assets/hero/jawita-hd.mp4" type="video/mp4">
+          </video>
+        </div>
+        <span class="blob" aria-hidden="true">¡Prueba la jawita!</span>
+      </div>
+    </div>
+  </article>
+
+  <div class="hero__ctl wrap">
+    <div class="dots" role="tablist" aria-label="Elegir promoción"></div>
+    <p class="terms">Precios referenciales · Combo Tradición no válido en aeropuertos</p>
+  </div>
+
+  <aside class="qr" id="qrCard" aria-label="Pedir por WhatsApp">
+    <button class="qr__x" aria-label="Ocultar código QR">✕</button>
+    <img src="assets/brand/qr-whatsapp.svg" alt="Código QR para pedir por WhatsApp" width="96" height="96">
+    <strong>¡Pide por WhatsApp!</strong>
+  </aside>
+
+  <div class="aguayo aguayo--bottom" aria-hidden="true"></div>
+
+  <!-- Order box -->
+  <form class="orderbox" id="orderbox" aria-labelledby="obTitle">
+    <h2 id="obTitle" class="orderbox__t">¿Dónde quieres tu pedido?</h2>
+    <div class="seg" role="radiogroup" aria-label="Tipo de pedido">
+      <label><input type="radio" name="ob-service" value="delivery" checked><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="17" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M8.5 17h7M4 13h7l2-5h3l2.5 9M13 8h-3"/></svg>Delivery</span></label>
+      <label><input type="radio" name="ob-service" value="pickup"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9l1.5-5h13L20 9M4 9v11h16V9M4 9h16M9 20v-6h6v6"/></svg>Recojo</span></label>
+    </div>
+    <div class="orderbox__row">
+      <label class="vh" for="obBranch">Sucursal</label>
+      <select id="obBranch" class="select"></select>
+      <button class="btn btn--dark" type="submit">Empezar →</button>
+    </div>
+    <p class="orderbox__st" id="obStatus"><span class="dot"></span> Calculando…</p>
+  </form>
+</section>
+
+<!-- Discover row -->
+<section class="discover" aria-labelledby="discT">
+  <div class="wrap">
+    <h2 id="discT" class="discover__t">Descubre lo nuestro</h2>
+  </div>
+  <div class="rail-wrap">
+    <button class="arrow arrow--l" data-rail="offers" data-dir="-1" aria-label="Anterior">←</button>
+    <div class="rail rail--offers" id="offers" tabindex="0" aria-label="Publicaciones destacadas"></div>
+    <button class="arrow arrow--r" data-rail="offers" data-dir="1" aria-label="Siguiente">→</button>
+  </div>
+  <div class="wrap"><a class="ulink" href="https://www.instagram.com/wistupiku/" target="_blank" rel="noopener">Ver todo en Instagram ↗</a></div>
+</section>
+
+<!-- Classics -->
+<section class="sec sec--cream" id="promos" aria-labelledby="clT">
+  <div class="wrap">
+    <header class="sechead reveal">
+      <p class="eyebrow">Combinaciones de siempre</p>
+      <h2 id="clT" class="display">Las parejas <span class="hl">más bolivianas</span></h2>
+      <p class="sub">Una promo de verdad y tres clásicos de la casa. El precio de los clásicos es la suma de cada producto: sin trucos.</p>
+    </header>
+    <div class="classics" id="classics"></div>
+  </div>
+</section>
+
+<!-- Spotlight -->
+<section class="spot" id="especiales" aria-labelledby="spT">
+  <div class="wrap spot__grid">
+    <figure class="spot__img reveal">
+      <img src="assets/img/especial-charque.webp" alt="Empanada especial de charque abierta" width="900" height="1125" loading="lazy">
+    </figure>
+    <div class="spot__copy reveal">
+      <p class="eyebrow">Las especiales de la casa</p>
+      <h2 class="display display--xl">Charque, pollo <span class="hl">y carne</span></h2>
+      <p class="lede">Masa dorada, relleno generoso y ese sabor de altura que se reconoce a la primera mordida.</p>
+      <div class="bigprice"><span>Bs</span><b data-price="wistu-charque">11</b></div>
+      <div class="spot__cta">
+        <button class="btn btn--mustard btn--lg" data-add="wistu-charque">Agregar charque</button>
+        <button class="btn btn--ghost btn--lg" data-add="wistu-pollo">Agregar pollo</button>
+      </div>
+      <p class="fine">La de carne: precio por confirmar en sucursal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Menu -->
+<section class="sec sec--cream" id="carta" aria-labelledby="mnT">
+  <div class="wrap">
+    <header class="sechead reveal">
+      <p class="eyebrow">Nuestra carta</p>
+      <h2 id="mnT" class="display">¿Cuál <span class="hl">wistʼu</span> te llevas hoy?</h2>
+      <p class="sub">Empanadas, salteñas, api con pastel, tojorí, helados… comida típica boliviana a cualquier hora del día.</p>
+    </header>
+    <div class="tabs" role="tablist" aria-label="Categorías" id="menuTabs"></div>
+    <div class="menu" id="menuList" role="tabpanel"></div>
+    <button class="btn btn--outline menu__more" id="menuMore" hidden>Ver todo ↓</button>
+    <p class="fine fine--center">Precios referenciales, pueden variar por sucursal. “Consulta” = precio no publicado: pídelo directo a tu sucursal.</p>
+  </div>
+</section>
+
+<!-- Combos + featured -->
+<section class="sec sec--wine" id="combos" aria-labelledby="cbT">
+  <div class="aguayo aguayo--top" aria-hidden="true"></div>
+  <div class="wrap">
+    <header class="sechead sechead--light reveal">
+      <p class="eyebrow">Combo y favoritos</p>
+      <h2 id="cbT" class="display">Tu combo favorito <span class="hl">vuelve</span></h2>
+    </header>
+    <div class="combo" id="comboCard"></div>
+    <div class="featured" id="featured"></div>
+    <p class="fine fine--light">Combo Tradición: todos los días, en todas las sucursales a nivel nacional. No válido en sucursales de aeropuerto.</p>
+  </div>
+</section>
+
+<!-- Reels -->
+<section class="sec sec--orange" id="reels" aria-labelledby="rlT">
+  <div class="wrap reels__head">
+    <header class="sechead reveal">
+      <p class="eyebrow">En vivo desde la Wistʼu</p>
+      <h2 id="rlT" class="display">Es lindo <span class="hl">ser boliviano</span></h2>
+    </header>
+    <div class="reels__nav">
+      <button class="arrow arrow--static" data-rail="reels" data-dir="-1" aria-label="Reels anteriores">←</button>
+      <button class="arrow arrow--static" data-rail="reels" data-dir="1" aria-label="Más reels">→</button>
+    </div>
+  </div>
+  <div class="rail rail--reels" id="reelsRail" tabindex="0" aria-label="Reels de Instagram"></div>
+</section>
+
+<!-- Funnel -->
+<section class="sec sec--dark" id="pedir" aria-labelledby="fnT">
+  <div class="wrap funnel">
+    <div class="funnel__form">
+      <header class="sechead sechead--light">
+        <p class="eyebrow">Pide en 4 pasos</p>
+        <h2 id="fnT" class="display">Directo a <span class="hl">tu sucursal</span></h2>
+        <p class="sub">Arma tu pedido y lo enviamos por WhatsApp a la sucursal que elijas.</p>
+      </header>
+      <ol class="steps" id="steps" aria-label="Progreso">
+        <li class="is-on">Qué</li><li>Detalle</li><li>Tus datos</li><li>Enviar</li>
+      </ol>
+      <form id="funnel" novalidate>
+        <fieldset class="step is-on" data-step="1">
+          <legend class="vh">¿Qué necesitas?</legend>
+          <div class="choices" id="intentChoices">
+            <label class="choice"><input type="radio" name="intent" value="delivery"><span><b>Delivery</b><small>Te lo llevamos</small></span></label>
+            <label class="choice"><input type="radio" name="intent" value="pickup"><span><b>Recojo</b><small>Pasas por tu sucursal</small></span></label>
+            <label class="choice"><input type="radio" name="intent" value="evento"><span><b>Evento o refrigerio</b><small>Cumples, oficina, reuniones</small></span></label>
+            <label class="choice"><input type="radio" name="intent" value="consulta"><span><b>Consulta</b><small>Horarios, productos…</small></span></label>
+          </div>
+        </fieldset>
+        <fieldset class="step" data-step="2">
+          <legend class="vh">Detalle</legend>
+          <div data-for="order">
+            <div class="fcart" id="fCart"></div>
+            <details class="picker"><summary>+ Agregar desde la carta</summary><div id="picker"></div></details>
+          </div>
+          <div data-for="evento" hidden>
+            <div class="grid2">
+              <label class="field"><span>Fecha</span><input type="date" name="evDate"></label>
+              <label class="field"><span>Personas</span><input type="number" name="evPeople" min="1" max="2000" inputmode="numeric"></label>
+            </div>
+            <label class="field"><span>Ocasión</span><input type="text" name="evOccasion" placeholder="Cumpleaños, desayuno de oficina…" maxlength="80"></label>
+          </div>
+          <div data-for="consulta" hidden>
+            <label class="field"><span>Tu consulta</span><textarea name="question" rows="3" maxlength="400" placeholder="¿Tienen salteñas los domingos?"></textarea></label>
+            <button type="button" class="btn btn--mustard" data-chat>Pregúntale a Caser-IA ✨</button>
+          </div>
+        </fieldset>
+        <fieldset class="step" data-step="3">
+          <legend class="vh">Tus datos</legend>
+          <label class="field"><span>Tu nombre</span><input type="text" name="name" autocomplete="name" maxlength="60" required></label>
+          <label class="field"><span>Sucursal</span><select name="branch" id="fBranch" class="select" required></select></label>
+          <div data-for="delivery" hidden>
+            <label class="field"><span>Dirección</span><input type="text" name="address" autocomplete="street-address" maxlength="140"></label>
+            <label class="field"><span>Referencia</span><input type="text" name="reference" maxlength="140" placeholder="Portón verde, frente a la plaza…"></label>
+          </div>
+          <div class="field"><span>¿Para cuándo?</span>
+            <div class="chips" role="radiogroup" aria-label="¿Para cuándo?">
+              <label class="chip"><input type="radio" name="whenMode" value="asap" checked><span>Lo antes posible</span></label>
+              <label class="chip"><input type="radio" name="whenMode" value="later"><span>Programar</span></label>
+              <input type="time" name="whenTime" class="chip__time" aria-label="Hora" hidden>
+            </div>
+          </div>
+          <label class="field"><span>Nota (opcional)</span><input type="text" name="notes" maxlength="140" placeholder="Helado de canela, sin cubiertos…"></label>
+        </fieldset>
+        <fieldset class="step" data-step="4">
+          <legend class="vh">Revisar y enviar</legend>
+          <div class="review" id="review"></div>
+          <a class="btn btn--wa btn--lg btn--block" id="waSend" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/></svg>Enviar por WhatsApp</a>
+        </fieldset>
+        <p class="fmsg" id="fMsg" role="status" aria-live="polite"></p>
+        <div class="fnav">
+          <button type="button" class="btn btn--ghost" id="fBack" hidden>← Atrás</button>
+          <button type="button" class="btn btn--mustard" id="fNext">Siguiente →</button>
+        </div>
+      </form>
+    </div>
+    <div class="phone" aria-hidden="true">
+      <div class="phone__in">
+        <div class="phone__top"><img src="assets/img/logo.png" alt="" width="32" height="32"><div><b id="phName">Wistʼupiku</b><small>en línea</small></div></div>
+        <div class="phone__chat"><div class="bubble bubble--out" id="phMsg">¡Hola Wistʼupiku! 🥟</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Branches -->
+<section class="sec sec--cream" id="sucursales" aria-labelledby="brT">
+  <div class="wrap">
+    <header class="sechead reveal">
+      <p class="eyebrow">Encuentra la Wistʼu más cercana</p>
+      <h2 id="brT" class="display">29 sucursales, <span class="hl">un solo sabor</span></h2>
+      <p class="nowpill" id="nowPill"><span class="dot dot--live"></span> —</p>
+    </header>
+    <div class="tabs tabs--city" role="tablist" aria-label="Ciudades" id="cityTabs"></div>
+    <div class="branches" id="branches"></div>
+    <div class="band band--delivery reveal">
+      <div><p class="eyebrow">¿Prefieres que te lo lleven?</p>
+        <h3>Pídelo a domicilio por WhatsApp a tu sucursal o en PedidosYa.</h3>
+        <p class="fine">El costo de envío lo confirma la sucursal.</p></div>
+      <div class="band__cta">
+        <a class="btn btn--dark" href="#pedir" data-funnel="delivery">Pedir delivery</a>
+        <a class="btn btn--outline" href="https://www.pedidosya.com.bo/cadenas/wistupiku" target="_blank" rel="noopener">PedidosYa ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Story -->
+<section class="sec sec--dark story" id="historia" aria-labelledby="stT">
+  <div class="wrap story__grid">
+    <div class="story__media reveal">
+      <video class="story__video" muted playsinline loop preload="none" poster="assets/video/historia.webp" data-autoplay aria-label="Video: Wistupiku presenta su nueva imagen">
+        <source src="assets/video/historia.mp4" type="video/mp4">
+      </video>
+      <figure class="story__portrait">
+        <img src="assets/img/jose-soliz.webp" alt="Retrato en blanco y negro de José Soliz Vaca, el Wistʼupiku" width="900" height="1125" loading="lazy">
+        <figcaption>José Soliz Vaca, “El Wistʼupiku”</figcaption>
+      </figure>
+    </div>
+    <div class="story__copy reveal">
+      <p class="eyebrow">Nuestra historia</p>
+      <h2 id="stT" class="display">Todo empezó en una <span class="hl">mesa de cocina</span></h2>
+      <p>La palabra <b>wistʼupiku</b> es quechua y significa “boca o pico chueco”. Así le decían con cariño los kʼochalas a José Soliz Vaca, que volvió de la Guerra del Chaco con una esquirla de granada en el rostro.</p>
+      <p>Desde 1939 elaboramos empanadas y repostería tradicional de Bolivia. Hoy nos encuentras en Cochabamba, Santa Cruz, La Paz y Sucre, con el mismo sabor de siempre y una familia de trabajo que crece con nosotros.</p>
+      <ol class="timeline">
+        <li><b>1939</b><span>Nace en la Llajta, Cochabamba.</span></li>
+        <li><b>2023</b><span>Llegamos a Sucre: Calle Calvo #70.</span></li>
+        <li><b>2025</b><span>Nueva imagen y sucursales renovadas en La Paz.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- Feed -->
+<section class="sec sec--cream" id="instagram" aria-labelledby="igT">
+  <div class="wrap">
+    <header class="sechead sechead--row reveal">
+      <div><p class="eyebrow">@wistupiku</p><h2 id="igT" class="display">Síguenos en <span class="hl">Instagram</span></h2></div>
+      <a class="btn btn--red" href="https://www.instagram.com/wistupiku/" target="_blank" rel="noopener">Seguir en Instagram ↗</a>
+    </header>
+    <div class="feed" id="feed"></div>
+  </div>
+</section>
+
+<!-- Events + jobs -->
+<section class="sec sec--sky" id="trabajo" aria-label="Eventos y trabajo">
+  <div class="wrap duo">
+    <div class="duo__card reveal">
+      <p class="eyebrow">¿Tienes un evento?</p>
+      <h3 class="display display--sm">El refrigerio <span class="hl">más rico</span> de Bolivia</h3>
+      <p>Ofertas para eventos corporativos, cumpleaños y reuniones familiares. Te servimos la cantidad que desees en tu oficina o domicilio.</p>
+      <a class="btn btn--dark" href="#pedir" data-funnel="evento">Cotizar por WhatsApp</a>
+    </div>
+    <div class="duo__card reveal">
+      <p class="eyebrow">Crece con nosotros</p>
+      <h3 class="display display--sm">Únete a la <span class="hl">familia</span> Wistʼupiku</h3>
+      <p>Muchos de nuestro equipo empezaron como meseros o en caja y hoy lideran tiendas y producción. ¿Te animas?</p>
+      <a class="btn btn--outline" href="https://www.wistupiku.com/formulario-solicitud-trabajo/" target="_blank" rel="noopener">Postular ↗</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="aguayo" aria-hidden="true"></div>
+  <div class="ftr__band">
+    <div class="wrap ftr__in">
+      <p class="ftr__sign">¡Nos vemos en la Wistʼu!</p>
+      <button class="btn btn--red btn--help" data-chat>Ayuda ›</button>
+      <div class="ftr__groups" id="ftrGroups"></div>
+      <p class="ftr__meta">Empanadas y repostería tradicional de Bolivia desde 1939 · Cochabamba · Santa Cruz · La Paz · Sucre<br>© <span id="year"></span> Wistʼupiku. Precios referenciales.</p>
+    </div>
+  </div>
+  <div class="ftr__bar">
+    <div class="wrap ftr__barin">
+      <a class="ftr__tel" href="https://wa.me/59172228172" target="_blank" rel="noopener">Bolivia · Pedidos <b>+591 722 28172</b></a>
+      <a class="ftr__brand" href="#top" aria-label="Volver arriba"><img src="assets/img/logo.png" alt="" width="40" height="40" loading="lazy"><img src="assets/brand/wordmark-cream.png" alt="Wistʼupiku" width="130" height="32" loading="lazy"></a>
+      <div class="ftr__social">
+        <a href="https://www.instagram.com/wistupiku/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="https://www.facebook.com/wistupiku" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8z"/></svg></a>
+        <a href="https://www.tiktok.com/@wistupiku" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3-3.46M14 3c.5 2.5 2.5 4.5 5 4.6"/></svg></a>
+        <a href="https://wa.me/59172228172" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Cart drawer -->
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drT" hidden>
+  <header class="drawer__h"><h2 id="drT">Tu pedido</h2><button class="x" data-close aria-label="Cerrar">✕</button></header>
+  <div class="drawer__body" id="drawerBody"></div>
+  <footer class="drawer__f"><div class="drawer__tot"><span>Total referencial</span><b id="drawerTotal">Bs 0</b></div>
+    <a class="btn btn--mustard btn--block btn--lg" href="#pedir" data-funnel id="drawerGo">Continuar pedido →</a></footer>
+</aside>
+
+<!-- Caser-IA -->
+<button class="fab" id="fab" data-chat aria-label="Abrir Caser-IA, asistente de pedidos">
+  <img src="assets/img/logo.png" alt="" width="40" height="40"><span><b>Caser-IA</b><small>¿Te ayudo?</small></span><i class="dot dot--live"></i>
+</button>
+<section class="chat" id="chat" role="dialog" aria-modal="false" aria-labelledby="chT" hidden>
+  <header class="chat__h">
+    <img src="assets/img/logo.png" alt="" width="36" height="36">
+    <div><h2 id="chT">Caser-IA ✨</h2><small><i class="dot dot--live"></i> Asistente de pedidos</small></div>
+    <button class="x" data-close aria-label="Cerrar chat">✕</button>
+  </header>
+  <div class="chat__log" id="chatLog" aria-live="polite"></div>
+  <div class="chat__starters" id="starters"></div>
+  <form class="chat__in" id="chatForm">
+    <label class="vh" for="chatText">Escribe tu mensaje</label>
+    <input id="chatText" type="text" autocomplete="off" maxlength="600" placeholder="Quiero 2 wistus de queso…">
+    <button type="button" class="mic" id="mic" aria-label="Hablar" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
+    <button type="submit" class="send" aria-label="Enviar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l16-8-6 16-2-6z"/></svg></button>
+  </form>
+  <div class="voicebar" id="voicebar" hidden>
+    <svg class="eq" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4M8 6v12M12 9v6M16 4v16M20 10v4"/></svg>
+    <span id="voiceStatus">Toca el micrófono y habla</span>
+    <label class="switch"><input type="checkbox" id="handsfree"><span>Manos libres</span></label>
+  </div>
+  <p class="chat__disc">Caser-IA es una IA y puede equivocarse. Confirma tu pedido por WhatsApp.</p>
+</section>
+
+<!-- Mobile action bar -->
+<div class="mbar" id="mbar">
+  <button class="mbar__ai" data-chat aria-label="Abrir Caser-IA"><img src="assets/img/logo.png" alt="" width="34" height="34"></button>
+  <button class="mbar__cart" data-cart id="mbarCart" hidden></button>
+  <a class="mbar__go" href="#pedir" data-funnel>Pedir por WhatsApp →</a>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
